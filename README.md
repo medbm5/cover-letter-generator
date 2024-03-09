@@ -80,31 +80,6 @@ run streamlit run app.py
 ![Screenshot 2](assets/result-modern.png)
 
 
-## Examples
-### Example 1
-Resume: [Resume](assets/senior-data-scientist-resume-example.pdf)  
-Job Listing: [Job Listing](https://boards.greenhouse.io/applovin/jobs/4306104006)
-
-#### Classic Cover Letter
-Dear Hiring Manager,
-
-I am writing to express my interest in the Data Scientist position at AppLovin. With a decade of experience in data analysis and statistical modeling, I believe I would be a valuable addition to your team.
-
-Throughout my career, I have demonstrated a strong ability to extract meaningful insights from large datasets and make data-driven decisions. I have extensive experience in conducting in-depth data analysis, identifying trends and patterns, and providing valuable insights to drive business strategies. I also have a deep understanding of statistics and have successfully applied statistical concepts to real-world problems.
-
-In addition, I have strong proficiency in data analysis tools and packages such as Python and SQL, which I can leverage to manipulate and analyze data efficiently. I am also skilled in data visualization using tools like Matplotlib and Tableau, allowing me to effectively communicate insights to both technical and non-technical stakeholders.
-
-I am highly detail-oriented and have a passion for uncovering insights within data. I am also a strong problem solver and have a track record of collaborating effectively in cross-functional teams. I am constantly learning and staying updated with the latest trends and advancements in data analysis and statistical techniques.
-
-I am excited about the opportunity to contribute to AppLovin's advertising technology and help drive its growth. I believe that my skills and experience align well with the responsibilities of the Data Scientist position, and I am confident that I would be a valuable asset to your team.
-
-Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further and how I can contribute to AppLovin's success.
-
-Sincerely, Terrence Coleman
-
-#### Modern Cover Letter
-Hi, I'm Terrence Coleman, an analytically minded self-starter with a decade of experience collaborating with cross-functional teams to ensure data accuracy and integrity. I have a strong background in data analysis, statistical expertise, and data visualization using tools like Python and SQL. I have successfully led teams and implemented predictive modeling to drive business efficiency and strategic goals. I am excited about the opportunity to join AppLovin as a Data Scientist and apply my skills to analyze large datasets, uncover insights, and provide valuable recommendations to drive the advertising technology forward. With my strong analytical and problem-solving abilities, attention to detail, and effective communication skills, I am confident that I would be a great fit for this role. I look forward to the opportunity to contribute to AppLovin's success. Thank you for considering my application.
-
 
 ## Déploiement
 
