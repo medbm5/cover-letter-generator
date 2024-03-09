@@ -10,60 +10,75 @@ Le LLM utilisé est `gpt-3.5-turbo` pour sa rentabilité et ses capacités impre
 Les modèles locaux ont été évités en raison d'un manque de ressources de calcul disponibles. Cependant, la conception à travers LangChain permet de passer facilement à des modèles alternatifs.
 Le repo contient deux prompt principales, chacune conçue avec des instructions détaillées se concentrant sur un style différent de lettre de motivation. Ces prompts peuvent facilement être modifiées ou étendues pour inclure d'autres styles.
 
-## Steps
+## Etapes
 
-1. **Upload Resume:**
-   - Allows the user to upload a resume in PDF format. The resume is then converted to text using the `pypdf2` library.
+1. **Télécharger un CV:**
+   - Permet à l'utilisateur de télécharger un CV au format PDF. Le CV est ensuite converti en texte à l'aide de la bibliothèque `pypdf2`.
 
 2. **Input Job Listing:**
-   - Allows the user to input a job listing URL or text. A simple LLM based scraper is used to extract the relevant job description and company information from the URL.
-     - Note: For websites which are hard to scrape, please use the text option to enter the job description manually.
+   - Permet à l'utilisateur de saisir le texte d'une offre d'emploi. .
 
-3. **Style Selector:**
-   - Allows the user to select a style of cover letter, determining which prompt will be used to generate the cover letter.
-     - The `Classic` style is designed to be a more traditional cover letter with a suitable length and tone.
-     - The `Modern` style is designed to be a more concise cover letter with a more casual tone.
+3. **Sélecteur de style:**
+   - Permet à l'utilisateur de sélectionner un style de lettre de motivation, en déterminant l'invite qui sera utilisée pour générer la lettre de motivation.
+     - Le style "classique" est conçu pour être une lettre de motivation plus traditionnelle, avec une longueur et un ton appropriés.
+     - Le style "moderne" est conçu pour être une lettre de motivation plus concise avec un ton plus décontracté.
 
-4. **Generate Cover Letter:**
-   - Generates a cover letter based on the selected style and the provided resume and job listing. The generated cover letter is displayed in the UI and can be easily copied to the clipboard.
+4. **Générer une lettre de motivation:**
+   - Génère une lettre de motivation basée sur le style sélectionné et sur le CV et l'offre d'emploi fournis. La lettre de motivation générée est affichée dans l'interface utilisateur et peut être facilement copiée dans le presse-papiers.
+## Installation
 
-## How to Run
+### Prérequis
 
-### Prerequisites
+1. Python 3.9 ou version ultérieure.
+2. pip et virtualenv.
 
-Make sure you have [Poetry](https://python-poetry.org/) installed.
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/DoubleGremlin81/cover-letter-llm.git
-cd cover-letter-llm
-```
+## Étapes d'installation
 
 ### Install Dependencies
+1. **Clonage du dépôt:** Clonez le dépôt GitHub sur votre machine locale pour commencer.
 
 ```bash
-poetry install
+git clone https://github.com/medbm5/cover-letter-generator.git
+cd cover-letter-generator
 ```
 
-### Create a `.env` File
+2. **Configuration de l'environnement virtuel:**
+
+```bash
+python -m venv cover-env
+# Sur Windows
+cover-env\Scripts\activate
+# Sur Unix ou MacOS
+source cover-env/bin/activate
+```
+
+3. **Installation des dépendances:**
+
+ ```bash
+pip install -r requirements.txt
+```
+
+4. **Configuration des variables d'environnement:**
 
 ```bash
 echo "OPENAI_API_KEY=<your-openai-api-key>" >> .env
 ```
 
 
-### Run the Application
+4. **Lancement de l'application:**
 
 ```bash
-poetry run streamlit run app.py
+run streamlit run app.py
 ```
 
 ## Screenshots
 
 ![Screenshot 1](assets/screenshot1.png)
 
-![Screenshot 2](assets/screenshot2.png)
+![Screenshot 2](assets/result-classic.png)
+
+![Screenshot 2](assets/result-modern.png)
+
 
 ## Examples
 ### Example 1
@@ -91,24 +106,6 @@ Sincerely, Terrence Coleman
 Hi, I'm Terrence Coleman, an analytically minded self-starter with a decade of experience collaborating with cross-functional teams to ensure data accuracy and integrity. I have a strong background in data analysis, statistical expertise, and data visualization using tools like Python and SQL. I have successfully led teams and implemented predictive modeling to drive business efficiency and strategic goals. I am excited about the opportunity to join AppLovin as a Data Scientist and apply my skills to analyze large datasets, uncover insights, and provide valuable recommendations to drive the advertising technology forward. With my strong analytical and problem-solving abilities, attention to detail, and effective communication skills, I am confident that I would be a great fit for this role. I look forward to the opportunity to contribute to AppLovin's success. Thank you for considering my application.
 
 
-### Example 2
-Resume: [Resume](assets/senior-data-scientist-resume-example.pdf)  
-Job Listing: [Job Listing](https://jobs.lever.co/Grid/6d7c0bcb-61ff-415f-9aa0-c6750b66754f)
+## Déploiement
 
-#### Classic Cover Letter
-Dear Hiring Manager,
-
-I am excited to apply for the Staff Data Scientist position at Grid. With my decade of experience in data science and analytics, I am confident that I can make a significant impact on Grid's progress and contribute to the success of its users.
-
-In my current role as a Senior Data Scientist at Best Buy, I have led data extraction and evaluation efforts, resulting in cost savings of over 11M. I have also partnered with the product team to build a production recommendation engine in Python, which generated $450K in incremental annual revenue. These experiences demonstrate my ability to collaborate with cross-functional teams and deliver actionable insights.
-
-Furthermore, my experience at 2U as a Data Scientist and Data Analyst has honed my skills in A/B testing, data extraction, and modeling. I have successfully optimized algorithms to target the learning audience by 15% and increased profitability by 4% through Python clustering methods.
-
-With my proficiency in Python, SQL, and machine learning techniques, I am well-equipped to develop and validate models that align with Grid's strategic objectives. Additionally, my understanding of the financial industry, gained through building and scaling FinTech products, will enable me to contribute domain knowledge to the team.
-
-I am eager to join Grid and help build out the data science team and practice. I am confident that my analytical mindset, autonomy, and curiosity make me the ideal candidate for this role. Thank you for considering my application.
-
-Sincerely, Terrence Coleman
-
-#### Modern Cover Letter
-Hi, I'm Terrence Coleman, an analytically minded self-starter with a decade of experience in data science and analysis. I have a strong background in statistical inference and machine learning, which aligns well with Grid's need for a Staff Data Scientist. In my current role at Best Buy, I led data extraction efforts and built a recommendation engine that resulted in increased revenue. Additionally, I developed customer attrition models and improved monthly retention. My experience at 2U allowed me to optimize algorithms and improve learning platforms through A/B testing. I have also worked extensively with Python, SQL, and Excel to extract and analyze data. With my expertise in data science, autonomy, and domain knowledge in the financial industry, I believe I would be a great fit for Grid's team. I am excited to contribute to Grid's mission of leveling the financial playing field and would love the opportunity to further discuss how my skills and experience can benefit your company. Thank you for considering my application.
+L'application est déployée avec Streamlit 
