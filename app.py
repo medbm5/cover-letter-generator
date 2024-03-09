@@ -21,15 +21,7 @@ def main():
 
     # Input Job Listing
     st.header("2. Input Job Listing")
-    job_listing_type = st.radio("Select input type", ("URL", "Text"))
-    job_listing_text = st.session_state.job_listing_text if "job_listing_text" in st.session_state else None
-    if job_listing_type == "URL":
-        job_listing_url = st.text_input("Enter job listing URL", "")
-        if st.button("Fetch Job Listing"):
-            job_listing_text = parse_job_listing(job_listing_url)
-            st.session_state.job_listing_text = job_listing_text
-    elif job_listing_type == "Text":
-        job_listing_text = st.text_area("Enter job listing text", "")
+    job_listing_text = st.text_area("Enter job listing text", "")
 
     # Select Cover Letter Style
     st.header("3. Select Cover Letter Style")
